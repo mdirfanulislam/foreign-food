@@ -6,10 +6,7 @@ export default function Nav({ FoodCount }: FoodCountProps) {
   return (
     <div className="navbar bg-white w-full px-4 sm:px-6 flex items-center justify-between gap-4 border-b border-gray-100">
       <div className="flex-none">
-        <a
-          href="/"
-          className="text-lg sm:text-xl font-extrabold text-orange-400 px-2"
-        >
+        <a href="/" className="text-2xl font-extrabold text-orange-400 px-2">
           Foreign Food
         </a>
       </div>

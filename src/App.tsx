@@ -5,7 +5,7 @@ import FoodList from "./components/Food/FoodList";
 
 const fetchFoods = async () => {
   const res = await fetch(
-    "https://www.themealdb.com/api/json/v1/1/search.php?f=a",
+    "https://www.themealsm:text-2xldb.com/api/json/v1/1/search.php?f=a",
   );
   return res.json();
 };
@@ -23,12 +23,12 @@ function App() {
   return (
     <section className="min-h-screen bg-gray-50 flex flex-col">
       <header className="sticky top-0 z-100 bg-white shadow-sm overflow-visible">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
+        <nav className="max-w-380 mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
           <Nav FoodCount={FoodCount} />
         </nav>
       </header>
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="flex-1 max-w-380 w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Suspense
           fallback={
             <div className="flex flex-col items-center justify-center min-h-[40vh] gap-3">

@@ -13,7 +13,7 @@ const Food = ({ food, handleAddToCart, isInCart }: foodProps) => {
         <figure className="relative h-48 overflow-hidden">
           <img
             src={food.strMealThumb}
-            alt={food.strMeal}
+            alt="Something Went Wrong!"
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
           />
         </figure>
