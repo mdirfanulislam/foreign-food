@@ -5,7 +5,7 @@ import FoodList from "./components/Food/FoodList";
 
 const fetchFoods = async () => {
   const res = await fetch(
-    "https://www.themealsm:text-2xldb.com/api/json/v1/1/search.php?f=a",
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=a",
   );
   return res.json();
 };
