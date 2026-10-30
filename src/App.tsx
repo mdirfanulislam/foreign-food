@@ -15,6 +15,8 @@ const foodsPromise = fetchFoods();
 function App() {
   const [FoodCount, setFoodCount] = useState<string[]>([]);
 
+  const [searchFood, setSearchFood] = useState<string>("");
+
   const handleAddToCart = (newFood: string): void => {
     const newFoodCount = [...FoodCount, newFood];
     setFoodCount(newFoodCount);
@@ -24,7 +26,7 @@ function App() {
     <section className="min-h-screen bg-gray-50 flex flex-col">
       <header className="sticky top-0 z-100 bg-white shadow-sm overflow-visible">
         <nav className="max-w-380 mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
-          <Nav FoodCount={FoodCount} />
+          <Nav FoodCount={FoodCount} onSearchChange={setSearchFood} />
         </nav>
       </header>
 
@@ -43,6 +45,7 @@ function App() {
             foodsPromise={foodsPromise}
             handleAddToCart={handleAddToCart}
             FoodCount={FoodCount}
+            searchFood={searchFood}
           />
         </Suspense>
       </main>

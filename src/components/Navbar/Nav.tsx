@@ -1,8 +1,9 @@
 interface FoodCountProps {
   FoodCount: string[];
+  onSearchChange: (searchValue: string) => void;
 }
 
-export default function Nav({ FoodCount }: FoodCountProps) {
+export default function Nav({ FoodCount, onSearchChange }: FoodCountProps) {
   return (
     <div className="navbar bg-white w-full px-4 sm:px-6 flex items-center justify-between gap-4 border-b border-gray-100">
       <div className="flex-none">
@@ -14,8 +15,9 @@ export default function Nav({ FoodCount }: FoodCountProps) {
       <div className="flex-1 max-w-md mx-auto">
         <div className="form-control relative w-full">
           <input
+            onChange={(e) => onSearchChange(e.target.value)}
             type="text"
-            placeholder="Search recipes..."
+            placeholder="Search Foods..."
             className="input input-bordered w-full h-10 bg-white text-gray-800 placeholder-gray-400 border-gray-200 focus:border-orange-400 focus:outline-none focus:ring-1 focus:ring-orange-400 transition-all rounded-xl pl-9 pr-4 text-sm"
           />
           <i className="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
