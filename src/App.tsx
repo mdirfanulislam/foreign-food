@@ -10,6 +10,8 @@ const fetchFoods = async () => {
   return res.json();
 };
 
+const foodsPromise = fetchFoods();
+
 function App() {
   const [FoodCount, setFoodCount] = useState<string[]>([]);
 
@@ -17,8 +19,6 @@ function App() {
     const newFoodCount = [...FoodCount, newFood];
     setFoodCount(newFoodCount);
   };
-
-  const foodsPromise = fetchFoods();
 
   return (
     <section className="min-h-screen bg-gray-50 flex flex-col">
